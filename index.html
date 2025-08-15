@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mevo</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/mevo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="#">&lsaquo;</a>
+    <span class="brand">mevo</span>
+  </header>
+
+  <main class="content">
+    <h1 class="title">Baixar documentos</h1>
+
+    <p class="desc">
+      Aqui você encontra os documentos que estão assinados digitalmente.
+      Importante: verifique a autenticidade no site
+      <a href="#">validar.iti.gov.br</a> e cheque as informações do conteúdo e assinatura.
+    </p>
+
+    <p class="desc">
+      Caso o prescritor não tenha assinado digitalmente os documentos, eles não serão exibidos e disponibilizados para download.
+    </p>
+
+    <!-- Botão Receita Digital -->
+    <div class="pill" id="btnReceita">
+      <span class="pill-left">
+        <!-- Ícone lupa -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5b1e83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.93 19.07a6.5 6.5 0 0 1 0-9.19l5.66-5.66a6.5 6.5 0 1 1 9.19 9.19l-5.66 5.66a6.5 6.5 0 0 1-9.19 0Z"/>
+          <path d="m9.88 9.88 4.24 4.24"/>
+        </svg>
+      </span>
+      <span class="pill-label">Receita Digital</span>
+    </div>
+
+    <!-- Botão Atestado Médico -->
+    <div class="pill" id="btnAtestado">
+      <span class="pill-left">
+        <!-- Ícone folha + -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5b1e83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <line x1="9" y1="15" x2="15" y2="15"/>
+        </svg>
+      </span>
+      <span class="pill-label">Atestado Médico</span>
+    </div>
+
+    <div class="footer-note">
+      <span class="lock">
+        <!-- Ícone cadeado -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8f8b90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </span>
+      <span>
+        Este site está protegido por reCAPTCHA e pela
+        <a href="#">Política de Privacidade</a> e
+        <a href="#">Termos de Uso do Google</a>
+      </span>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2>Para sua segurança, precisamos saber se você é o titular desta receita.</h2>
+      <p>Digite o <strong>código de acesso (4 números)</strong> que você recebeu por SMS, Whatsapp e/ou e-mail junto a sua receita digital</p>
+      <div class="code-inputs">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+      </div>
+      <button class="btn-primary">Confirmar Código de Acesso</button>
+      <button class="btn-secondary">Reenviar código por SMS</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
